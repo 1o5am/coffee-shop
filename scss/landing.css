@@ -1,4 +1,20 @@
 /* On Landing Page and Menu Page */
+.nav-link-button {
+  font-size: 1.31rem;
+  font-weight: 400;
+  background-color: #5BACC3;
+  color: #FFF;
+}
+
+.nav-link {
+  font-size: 1.31rem;
+  font-weight: 300;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -18,22 +34,6 @@ h1, h2 {
 h3, .nav-heading {
   font-size: 2.06rem;
   font-weight: 300;
-}
-
-.nav-link-button {
-  font-size: 1.31rem;
-  font-weight: 400;
-  background-color: #5BACC3;
-  color: #FFF;
-}
-
-.nav-link {
-  font-size: 1.31rem;
-  font-weight: 300;
-  padding: 20px;
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
 }
 
 p {
@@ -183,7 +183,7 @@ main {
 }
 
 .product-details {
-  background-color: #fff0ed;
+  background-color: #FFF0ED;
   padding: 1rem;
   display: flex;
   justify-content: space-between;

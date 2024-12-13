@@ -1,5 +1,19 @@
 /* On Landing Page and Menu Page */
 
+// Colors
+$blue: #5BACC3;
+$pink: #FFF0ED;
+$graphite: #393939;
+$gray: #909090;
+$light-gray: #F7F7F7;
+$white: #FFF;
+
+// Mixins
+
+// Imports
+@import 'nav';
+
+
 * {
     margin: 0;
     box-sizing: border-box  ;
@@ -8,7 +22,7 @@
 body {
     font-family: 'Open Sans';
     font-weight: 400;
-    color: #393939;
+    color: $graphite;
 }
 
 h1, h2 {
@@ -21,20 +35,7 @@ h3, .nav-heading {
     font-weight: 300;
 }
 
-.nav-link-button {
-    font-size: 1.31rem;
-    font-weight: 400;
-    background-color: #5BACC3;
-    color: #FFF
-}
-.nav-link {
-    font-size: 1.31rem;
-    font-weight: 300;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 p {
     font-size: 1.13rem;
