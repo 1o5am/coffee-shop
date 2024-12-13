@@ -123,6 +123,7 @@ main {
     flex-direction: column;
     text-align: center;
     align-items: center;
+
 }
 
 .product-image {
@@ -258,9 +259,7 @@ main {
 }
 
 .different-container-two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     position: relative;
 } 
 
