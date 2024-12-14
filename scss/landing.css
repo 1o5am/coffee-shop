@@ -282,15 +282,42 @@ main {
   background-color: #FFF0ED;
   padding: 2rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
-  gap: 2rem;
+  gap: rem;
   text-align: left;
+  position: relative;
 }
 
 .footer-section {
-  flex: 1;
   max-width: 200px;
+}
+
+.footer-logo__left {
+  width: 120px;
+  height: auto;
+  opacity: 0.25;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  left: -20px;
+  position: absolute;
+}
+
+.footer-logo__right {
+  width: 120px;
+  height: auto;
+  opacity: 0.25;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-self: flex-end;
+  right: 20px;
 }
 
 .footer-section h3 {

@@ -1,8 +1,16 @@
 @use './partials/global' as *;
+@import './partials/nav';
+@import './partials/mixins';
+@import './partials/variables';
+
 
 /* Menu Page */
 
 /* Menu Naviagtion Header */
+
+.menu-nav {
+
+}
 
 .menu-nav {
     background-color: $pink;

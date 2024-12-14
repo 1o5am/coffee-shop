@@ -38,3 +38,15 @@
     padding: 20px;
     margin: 20px;
 }
+
+
+@mixin footer-logo {
+    width: 120px;
+    height: auto;
+    opacity: .25;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}

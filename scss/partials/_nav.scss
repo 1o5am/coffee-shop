@@ -1,14 +1,14 @@
 .nav-link-button {
     font-size: 1.31rem;
     font-weight: 400;
-    background-color: #5BACC3;
-    color: #FFF
+    background-color: $blue;
+    color: $white;
 }
 .nav-link {
     font-size: 1.31rem;
     font-weight: 300;
-    padding: 20px;
-    margin: 20px;
+    padding: $padding;
+    margin: $margin;
     display: flex;
     justify-content: space-between;
 }
