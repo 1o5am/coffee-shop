@@ -1,4 +1,6 @@
 @use './partials/global' as *;
+@import './partials/nav';
+@import './partials/mixins';
 
 /* Lp Page */
 
@@ -13,6 +15,20 @@
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     height: 4rem;
+}
+
+.lp-nav__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lp-nav__right {
+    margin-left: auto;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
 }
 
 .lp-nav h2 a {
@@ -65,12 +81,7 @@
 }
 
 .shop-now-button {
-    border: none;
-    background-color: $blue;
-    color: $white;
-    border-radius: 5px;
-    padding: 0.8rem 2rem;
-    margin-top: 1rem;
+    @include button();
 }
 
 .lp-header__bottom img {
@@ -113,23 +124,14 @@ main {
 }
 
 .product-card {
-    background-color: $white;
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    padding-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-
+    @include product-card();
 }
 
 .product-image {
     max-width: 50%;
     height: auto;
     margin-bottom: 1rem;
+    @include product-image();
 }
 
 .product-details {
@@ -159,11 +161,7 @@ main {
 }
 
 .view-all-button {
-    border: none;
-    background-color: $blue;
-    color: $white;
-    padding: 0.8rem 2rem;
-    margin: 2rem auto;
+    @include button();
     display: inline-block;
     text-align: center;
 }
@@ -245,14 +243,8 @@ main {
 }
 
 .learn-more-button {
-    width: 180px;
-    padding: 20px;
-    margin: 20px;
-    background-color: $blue;
-    color: $white;
-    border: $gray solid 2px;
+    @include button;
 }
-
 
 .different-image {
     width: 50px;
@@ -267,25 +259,25 @@ main {
     width: 400px;
     padding: 20px;
     margin: 20px;
-    border: $blue solid 5px;
+    // border: $blue solid 5px;
     position: relative;
     z-index: 1;
 }
 
-.different-image-two::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    border: $blue solid 5px;
-    z-index: 2;
-}
+// .different-image-two::before {
+//     content: "";
+//     top: 20px;
+//     left: 20px;
+//     border: $blue solid 5px;
+//     z-index: 2;
+//     offset: 20px;
+// }
 
 .different-image-three {
     position: absolute;
     height: 280px;
     padding: 20px;
     margin: 20px;
-    z-index: 2;
+    z-index: 3;
     transform: rotate()
 }

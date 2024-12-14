@@ -3,3 +3,38 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin button($bg-color: $blue, $color: $white, $padding: 20px, $border: $graphite 2px solid, $border-radius: none, $cursor: pointer) {
+    background-color: $bg-color;
+    color: $color;
+    padding: $padding;
+    border-radius: $border-radius;
+    border: $border;
+    cursor: $cursor;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: translate(-2px);
+    }
+}
+
+@mixin product-card {
+    width: 330px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin product-image {
+    height: 280px;
+    padding: 20px;
+    margin: 20px;
+}
