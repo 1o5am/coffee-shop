@@ -86,60 +86,85 @@ p {
   background-color: #FFF0ED;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   padding-top: 2rem;
   padding-bottom: 1.5rem;
-  height: 4rem;
-}
-
-.menu-nav h3 a {
+  height: 6rem;
+  list-style-type: none;
   text-decoration: none;
 }
-
+.menu-nav h2 a {
+  color: #393939;
+  text-decoration: none;
+}
 .menu-nav nav ul {
   display: flex;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
-
-.menu-nav ul a {
-  text-decoration: none;
+.menu-nav ul li a {
   color: #393939;
+  text-decoration: none;
 }
-
 .menu-nav ul li a.shopnow {
   color: #5BACC3;
 }
+.menu-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.menu-nav__right {
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-/* Menu Hero Section */
 .menu-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
   margin-bottom: 2rem;
 }
-
+.menu-hero__circle {
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 .menu-hero__title {
-  position: absolute;
-  color: #FFF;
   background-color: #393939;
+  color: #FFF;
   text-align: center;
   width: 18.75rem;
   height: 12.5rem;
   display: flex;
   justify-content: center;
-  padding: 20px;
-  margin: 20px;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
-
-.menu-hero__circle {
-  width: 100%;
-  height: 43.75rem;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: none;
+.menu-hero__title::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 4px solid #5BACC3;
+  z-index: -1;
 }
 
 /*  Menu Sub Navigation */
@@ -158,6 +183,10 @@ p {
   margin: 0;
 }
 
+.menu-sub-navigation li {
+  list-style-type: none;
+}
+
 .menu-sub-navigation li::before {
   content: "";
   display: inline-block;
@@ -169,10 +198,10 @@ p {
 
 /* Menu */
 .menu-hot, .menu-cold, .menu-pastries {
-  margin: 0; /* Ensure no space around the sections */
-  padding: 0; /* Ensure no internal padding */
-  border: 0; /* Ensure no borders contribute to gaps */
-  display: block; /* Ensure sections stack properly */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
 }
 
 /* Hot Drinks */

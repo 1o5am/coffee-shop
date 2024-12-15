@@ -6,7 +6,7 @@
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
-    height: 4rem;
+    height: 6rem;
     list-style-type: none;
     text-decoration: none;  
 }
@@ -41,7 +41,7 @@
 
     ul li a {
         color: $text-color;
-        text-decoration: $text-decoration;
+        text-decoration: none;
 
         &.shopnow {
             color: $active-color;
