@@ -1,18 +1,23 @@
 /* On Landing Page and Menu Page */
-.nav-link-button {
-  font-size: 1.31rem;
-  font-weight: 400;
-  background-color: #5BACC3;
-  color: #FFF;
-}
-
-.nav-link {
-  font-size: 1.31rem;
-  font-weight: 300;
-  padding: 20px;
-  margin: 20px;
+.nav {
+  background-color: blue;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  height: 4rem;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__right {
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 * {
@@ -52,6 +57,27 @@ p {
 
 .products {
   height: 17.5rem;
+}
+
+.nav {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  height: 4rem;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__right {
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Menu Page */

@@ -1,6 +1,7 @@
 @use './partials/global' as *;
-@import './partials/nav';
-@import './partials/mixins';
+@use './partials/nav' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
 
 /* Lp Page */
 
@@ -8,61 +9,34 @@
 
 /* LP Navigation */
 
+.lp-header {
+    background-color: $pink;
+
+
+}
+
 .lp-nav {
-    background-color: $pink;
-    display: flex;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    height: 4rem;
+    @include nav;
+    @include nav-links;
+
+    &__left {
+        @include nav-left;
+    }
+
+    &__right {
+        @include nav-right;
+    }
+    
 }
 
-.lp-nav__left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.lp-nav__right {
-    margin-left: auto;
-    margin-right: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem; 
-}
-
-.lp-nav h2 a {
-    text-decoration: none;
-}
-
-.lp-nav nav ul {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-.lp-nav ul a {
-    text-decoration: none;
-    color: $graphite;
-}
-
-.lp-nav ul li a.shopnow{
-    color: $blue
-}
-
-.lp-header{
-    background-color: $pink;
-}
-
-.lp-header__bottom {
+.lp-header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 4rem 5rem;
 }
 
-.lp-header__bottom .text-content {
+.lp-header-bottom__text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,17 +56,16 @@
 
 .shop-now-button {
     @include button();
+    margin-top: 30px;
 }
 
 .lp-header__bottom img {
-    max-width: 40%;
+    // max-width: 40%;
     height: auto;
     object-fit: contain;
+    // padding: 20px;
+    margin: 20px;
     margin-left: 2rem;
-}
-
-ul {
-    list-style-type: none;
 }
 
 /* Main Section */
@@ -256,6 +229,7 @@ main {
 }
 
 .different-card {
+    
 }
 
 .learn-more-button {

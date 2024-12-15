@@ -1,3 +1,54 @@
+@use './variables' as *;
+
+@mixin nav {
+    background-color: $pink;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    height: 4rem;
+    list-style-type: none;
+    text-decoration: none;  
+}
+
+@mixin nav-left {  
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@mixin nav-right {
+    margin-left: auto;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@mixin nav-links($text-color: $graphite, $active-color: $blue, $gap:1.5rem) {
+    h2 a {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: $gap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul li a {
+        color: $text-color;
+        text-decoration: $text-decoration;
+
+        &.shopnow {
+            color: $active-color;
+        }
+    }
+}
+
 @mixin flex-center {
     display: flex;
     justify-content: center;

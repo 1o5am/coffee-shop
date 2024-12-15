@@ -3,7 +3,9 @@
 // Mixins
 
 // Imports
-@import 'nav';
+@use './nav' as *;
+@use './mixins' as *;
+@use './variables' as *;
 
 
 * {
@@ -27,15 +29,13 @@ h3, .nav-heading {
     font-weight: 300;
 }
 
-
-
 p {
     font-size: 1.13rem;
     font-weight: 400;
 }
 
 .price {
-    color: #5BACC3;
+    color: $blue;
 }
 
 /* Images */

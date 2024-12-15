@@ -1,18 +1,23 @@
 /* On Landing Page and Menu Page */
-.nav-link-button {
-  font-size: 1.31rem;
-  font-weight: 400;
-  background-color: #5BACC3;
-  color: #FFF;
-}
-
-.nav-link {
-  font-size: 1.31rem;
-  font-weight: 300;
-  padding: 20px;
-  margin: 20px;
+.nav {
+  background-color: blue;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  height: 4rem;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__right {
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 * {
@@ -54,25 +59,13 @@ p {
   height: 17.5rem;
 }
 
-.nav-link-button {
-  font-size: 1.31rem;
-  font-weight: 400;
-  background-color: #5BACC3;
-  color: #FFF;
-}
-
-.nav-link {
-  font-size: 1.31rem;
-  font-weight: 300;
-  padding: 20px;
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
 /* Lp Page */
 /* LP Header */
 /* LP Navigation */
+.lp-header {
+  background-color: #FFF0ED;
+}
+
 .lp-nav {
   background-color: #FFF0ED;
   display: flex;
@@ -80,14 +73,32 @@ p {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   height: 4rem;
+  list-style-type: none;
+  text-decoration: none;
 }
-
+.lp-nav h2 a {
+  color: #393939;
+  text-decoration: none;
+}
+.lp-nav nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lp-nav ul li a {
+  color: #393939;
+  text-decoration: none;
+}
+.lp-nav ul li a.shopnow {
+  color: #5BACC3;
+}
 .lp-nav__left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .lp-nav__right {
   margin-left: auto;
   margin-right: 1.5rem;
@@ -96,38 +107,14 @@ p {
   gap: 1rem;
 }
 
-.lp-nav h2 a {
-  text-decoration: none;
-}
-
-.lp-nav nav ul {
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.lp-nav ul a {
-  text-decoration: none;
-  color: #393939;
-}
-
-.lp-nav ul li a.shopnow {
-  color: #5BACC3;
-}
-
-.lp-header {
-  background-color: #FFF0ED;
-}
-
-.lp-header__bottom {
+.lp-header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 5rem;
 }
 
-.lp-header__bottom .text-content {
+.lp-header-bottom__text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -153,21 +140,18 @@ p {
   border: #393939 2px solid;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin-top: 30px;
 }
 .shop-now-button:hover {
   transform: translate(-2px);
 }
 
 .lp-header__bottom img {
-  max-width: 40%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 20px;
   margin-left: 2rem;
-}
-
-ul {
-  list-style-type: none;
 }
 
 /* Main Section */
