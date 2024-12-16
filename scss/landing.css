@@ -132,18 +132,33 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.shop-now-button {
-  background-color: #5BACC3;
-  color: #FFF;
-  padding: 20px;
-  border-radius: none;
-  border: #393939 2px solid;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  margin-top: 30px;
+.lp-header-bottom__button-container {
+  display: flex;
 }
-.shop-now-button:hover {
-  transform: translate(-2px);
+
+.shop-now-button {
+  width: 180px;
+  padding: 20px;
+  font-size: 1.2rem;
+  background-color: #5BACC3;
+  border: none;
+  color: #FFF;
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.empty-box {
+  width: 180px;
+  padding: 20px;
+  background-color: transparent;
+  color: #FFF;
+  border: 2px solid #393939;
+  margin-top: 30px;
+  position: relative;
+  top: -5px;
+  right: -175px;
+  z-index: 2;
 }
 
 .lp-header__bottom img {
@@ -232,18 +247,14 @@ main {
 }
 
 .view-all-button {
-  background-color: #5BACC3;
-  color: #FFF;
+  width: 180px;
   padding: 20px;
-  border-radius: none;
-  border: #393939 2px solid;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  background-color: #5BACC3;
+  border: none;
+  color: #FFF;
   display: inline-block;
   text-align: center;
-}
-.view-all-button:hover {
-  transform: translate(-2px);
 }
 
 .discount-banner {
@@ -344,16 +355,12 @@ main {
 }
 
 .learn-more-button {
-  background-color: #5BACC3;
-  color: #FFF;
+  width: 180px;
   padding: 20px;
-  border-radius: none;
-  border: #393939 2px solid;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.learn-more-button:hover {
-  transform: translate(-2px);
+  font-size: 1.2rem;
+  background-color: #5BACC3;
+  border: none;
+  color: #FFF;
 }
 
 .different-image {
