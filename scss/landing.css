@@ -148,8 +148,18 @@ p {
   top: -5.25px;
   left: -185px;
   z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
   z-index: 2;
   position: relative;
+}
+.shop-now-button:hover {
+  cursor: pointer;
+}
+.shop-now-button:active {
+  border-color: #5BACC3;
+  background-color: #5BACC3;
+  transform: translate(5px, 5px);
 }
 
 .blue-box {
@@ -161,6 +171,10 @@ p {
   border: none;
   position: relative;
   z-index: 1;
+  transition: opacity 0.3s ease;
+}
+.shop-now-button:active + .blue-box {
+  opacity: 0;
 }
 
 .lp-header__bottom img {
@@ -266,6 +280,10 @@ main {
   border: none;
   position: relative;
   z-index: 1;
+  transition: opacity 0.3s ease;
+}
+.shop-now-button:active + .blue-box {
+  opacity: 0;
 }
 
 .view-all-button {
@@ -280,6 +298,16 @@ main {
   top: -5.25px;
   left: -185px;
   z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.view-all-button:hover {
+  cursor: pointer;
+}
+.view-all-button:active {
+  border-color: #5BACC3;
+  background-color: #5BACC3;
+  transform: translate(5px, 5px);
 }
 
 .discount-banner {
@@ -391,6 +419,16 @@ main {
   top: -5.25px;
   left: -185px;
   z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.learn-more-button:hover {
+  cursor: pointer;
+}
+.learn-more-button:active {
+  border-color: #5BACC3;
+  background-color: #5BACC3;
+  transform: translate(5px, 5px);
 }
 
 .different-image {

@@ -55,6 +55,32 @@
     align-items: center;
 }
 
+// @mixin lp-button {
+//     width: 180px;
+//     padding: 20px;
+//     font-size: 1.2rem;
+//     background-color: transparent;
+//     color: $white;
+//     border: 3px solid $graphite;
+//     margin-top: 30px;
+//     position: relative;
+//     top: -5.25px;
+//     left: -185px;
+//     z-index: 2;
+// }
+
+
+// @mixin blue-button-box {
+//     width: 180px;
+//     padding: 20px;
+//     margin-top: 30px;
+//     font-size: 1.2rem;
+//     background-color: $blue;
+//     border: none;
+//     position: relative;
+//     z-index: 1;
+// }
+
 @mixin lp-button {
     width: 180px;
     padding: 20px;
@@ -67,6 +93,18 @@
     top: -5.25px;
     left: -185px;
     z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        border-color: $blue;
+        background-color: $blue;
+        transform: translate(5px, 5px); // Optional: adds a subtle press effect
+    }
 }
 
 @mixin blue-button-box {
@@ -78,6 +116,11 @@
     border: none;
     position: relative;
     z-index: 1;
+    transition: opacity 0.3s ease;
+
+    .shop-now-button:active + & {
+        opacity: 0; // Hide the blue box when button is clicked
+    }
 }
 
 @mixin product-card {
