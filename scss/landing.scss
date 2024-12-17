@@ -3,11 +3,7 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
 
-/* Lp Page */
-
-/* LP Header */
-
-/* LP Navigation */
+// LP Header
 
 .lp-header {
     background-color: $pink;
@@ -68,29 +64,14 @@
 }
 
 .lp-header__bottom img {
-    // max-width: 40%;
     height: auto;
     object-fit: contain;
-    // padding: 20px;
     margin: 20px;
     margin-left: 2rem;
 }
 
 /* Main Section */
 
-.discount-banner {
-    font-size: 2.8rem;
-    font-weight: 400;
-    width: 90%;
-    background-color: $graphite;
-    color: $white
-}
-
-.discount-code {
-    font-weight: 700;
-}
-
-/* Main Section */
 main {
     text-align: center;
     justify-content: center;
@@ -111,8 +92,6 @@ main {
 
 .product-image {
     max-width: 50%;
-    height: auto;
-    margin-bottom: 1rem;
     @include product-image();
 }
 
@@ -125,6 +104,7 @@ main {
     text-align: left;
     gap: .5rem;
     width: 100%;
+    margin-top: 1rem;
 }
 
 .product-title {
@@ -158,6 +138,96 @@ main {
     @include lp-button;
 }
 
+// Different Section
+
+@keyframes spin-animation {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.different-image-three {
+    position: absolute;
+    height: 280px;
+    padding: 20px;
+    margin: 20px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    
+    &:hover, 
+    .different-container-two:hover & {
+        animation: spin-animation 2s linear infinite;
+    }
+}
+
+.different-container-two {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.different-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.learn-more-button {
+    @include lp-button;
+}
+
+.different-image {
+    width: 50px;
+}
+
+
+.different-image-two {
+    width: 400px;
+    // padding: 20px;
+    // margin: 20px;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.different-container-two__blue-box {
+    width: 410px;
+    height: 400px;
+    // padding: 20px;
+    // margin: 20px;
+    background-color: transparent;
+    border: 5px solid $blue;
+    position: absolute;
+    z-index: 2;
+    top: -20px;
+    left: -20px;
+}
+
+
+// Discount Section
+
+@keyframes discount-flash {
+    0% {
+        background-color: $graphite;
+    }
+    50% {
+        background-color: $blue;
+    }
+    100% {
+        background-color: $graphite;
+    }
+}
 
 .discount-banner {
     width: 90%;
@@ -168,11 +238,13 @@ main {
     margin: 2rem auto;
     justify-content: center;
     display: block;
+    animation: discount-flash 2.5s ease-in-out infinite;
 }
 
 .discount-code {
     font-weight: 700;
 }
+
 
 /* Footer */
 .landingpage-footer {
@@ -230,73 +302,5 @@ main {
     width: 35%;
     margin: 1rem;
 
-}
-
-/* .different-header 
-
-.different-content
-
-.different-subtitle */
-
-.different-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    margin-top: 1rem;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.different-card {
-    
-}
-
-.learn-more-button {
-    @include lp-button;
-}
-
-.different-image {
-    width: 50px;
-}
-
-.different-container-two {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: fit-content;
-} 
-
-
-.different-image-two {
-    width: 400px;
-    padding: 20px;
-    // margin: 20px;
-    border: none;
-    position: relative;
-    z-index: 1;
-}
-
-.different-container-two__blue-box {
-    width: 375px;
-    height: 380px;
-    padding: 20px;
-    margin: 20px;
-    background-color: transparent;
-    border: 5px solid $blue;
-    position: absolute;
-    z-index: 2;
-    top: -30px;
-    left: -20px;
-}
-
-.different-image-three {
-    position: absolute;
-    height: 280px;
-    padding: 20px;
-    margin: 20px;
-    z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
